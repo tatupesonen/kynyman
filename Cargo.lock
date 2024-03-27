@@ -168,6 +168,7 @@ dependencies = [
  "poise",
  "poise_macros",
  "rcon",
+ "regex",
  "tokio",
 ]
 

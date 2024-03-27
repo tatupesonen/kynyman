@@ -4,7 +4,8 @@ use poise::serenity_prelude::{self as serenity, GuildId, RoleId};
 struct Data {
     rcon_pw: String,
     rcon_addr: String,
-} // User data, which is stored and accessible in all command invocations
+} 
+
 type Error = Box<dyn std::error::Error + Send + Sync>;
 type Context<'a> = poise::Context<'a, Data, Error>;
 mod commands;
@@ -26,6 +27,8 @@ async fn main() {
                 commands::execute(),
                 commands::gametype(),
                 commands::workshop_map(),
+                commands::workshop_collection(),
+                commands::set_map(),
             ],
             command_check: Some(|ctx| {
                 Box::pin(async move {
