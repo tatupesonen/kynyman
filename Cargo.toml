@@ -1,0 +1,16 @@
+[package]
+name = "botterino"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.35"
+dotenvy = "0.15.7"
+env_logger = "0.11.3"
+fluent = "0.16.0"
+poise = "0.6.1"
+poise_macros = "0.6.1"
+rcon = { version = "0.6.0", features = ["rt-tokio"] }
+tokio = { version = "1.36.0", features = ["full"] }
